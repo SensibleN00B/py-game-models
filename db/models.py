@@ -33,7 +33,7 @@ class Guild(models.Model):
 class Player(models.Model):
     nickname = models.CharField(unique=True, max_length=255)
     email = models.EmailField(max_length=255, unique=False)
-    bio = models.CharField(max_length=255)
+    bio = models.CharField(max_length=255, blank=True)
     race = models.ForeignKey(
         Race,
         on_delete=models.CASCADE,
